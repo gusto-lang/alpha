@@ -26,7 +26,7 @@ La IA se utilizó estrictamente como un motor de generación de código y docume
 - **Dirección Técnica:** Diseño manual de la arquitectura desacoplada (Frontend/Backend) y selección del stack tecnológico. La IA ejecutó las tareas repetitivas, pero yo definí la estructura de carpetas y los patrones de diseño (Factory Pattern, Services Layer).
 - **Prompt Engineering Avanzado:** Uso de técnicas de prompting secuencial y contextual para guiar al agente de Copilot en refactorizaciones complejas, asegurando que el código generado cumpliera con estándares estrictos de limpieza y escalabilidad.
 - **Resolución de Conflictos Críticos:** Intervención manual para solucionar problemas que la IA no pudo resolver, específicamente conflictos de entorno en Windows/PowerShell, dependencias circulares en Python y la configuración de seguridad (CORS).
-- **Seguridad y Best Practices:** Implementación manual de estrategias de seguridad, gestión correcta de variables de entorno (`.env`) y saneamiento del repositorio para asegurar un historial de Git limpio y profesional.
+- **Seguridad y DevOps:** Implementación manual de estrategias de gestión de secretos (`.env`), configuración de entornos virtuales robustos con Pipenv y saneamiento del repositorio para asegurar un despliegue seguro.
 
 ### Fases de Refactorización Ejecutadas
 
