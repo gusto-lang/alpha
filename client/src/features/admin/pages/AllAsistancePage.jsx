@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../../context/AuthProvider.jsx";
 
-export const AdminAlumnosAsistencia = () => {
+export const AllAsistancePage = () => {
   const { store } = useAuth();
   const token = store.access_token;
   const [students, setStudents] = useState([]);

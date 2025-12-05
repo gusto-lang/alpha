@@ -1,18 +1,19 @@
 import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-
-import studentImg from "../../../assets/img/students.png";
+import teacherImg from "../../../assets/img/teacher.png";
 import { useAuth } from "../../../context/AuthProvider";
 
-export const AlumnosDashboardNavbar = () => {
+export const TeacherNavbar = () => {
   const navigate = useNavigate();
   const { logout } = useAuth();
   const [showMenu, setShowMenu] = useState(false);
+  const [showSubmenu, setShowSubmenu] = useState(false);
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
   const closeMenu = () => {
     setShowMenu(false);
+    setShowSubmenu(false);
   };
 
   const handleLogout = () => {
@@ -44,17 +45,43 @@ export const AlumnosDashboardNavbar = () => {
           <div className="flex-grow-1">
             <ul className="list-unstyled text-start text-decoration-none d-flex flex-column gap-3 ps-3">
               <li className="my-3">
-                <Link
-                  to="/student/dashboard/notas"
-                  className="text-black text-decoration-none fw-semibold hovNav"
-                  onClick={closeMenu}
+                <button
+                  className="btn text-start w-100 text-black fw-semibold hovNavBtn p-0 border-0 bg-transparent"
+                  onClick={() => setShowSubmenu(!showSubmenu)}
                 >
-                  Notas
-                </Link>
+                  Alumnos{" "}
+                  <i
+                    className={`ri-arrow-${
+                      showSubmenu ? "up" : "down"
+                    }-s-line ms-2`}
+                  ></i>
+                </button>
+                {showSubmenu && (
+                  <ul className="list-unstyled mt-4 ">
+                    <li className="mb-4">
+                      <Link
+                        to="/teacher/dashboard/alumnos/notas"
+                        className="text-black hovNav text-decoration-none"
+                        onClick={closeMenu}
+                      >
+                        Notas
+                      </Link>
+                    </li>
+                    <li className="mb-2">
+                      <Link
+                        to="/teacher/dashboard/alumnos/asistencia"
+                        className="text-black hovNav text-decoration-none"
+                        onClick={closeMenu}
+                      >
+                        Asistencia
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
               <li className="my-3">
                 <Link
-                  to="/student/dashboard/horario"
+                  to="/teacher/dashboard/horario"
                   className="text-black text-decoration-none fw-semibold hovNav"
                   onClick={closeMenu}
                 >
@@ -71,7 +98,7 @@ export const AlumnosDashboardNavbar = () => {
               aria-expanded="false"
             >
               <img
-                src={studentImg}
+                src={teacherImg}
                 alt=""
                 className="rounded-circle imgUserWidth"
               />
@@ -81,7 +108,11 @@ export const AlumnosDashboardNavbar = () => {
               data-popper-placement="top-start"
             >
               <li>
-                <Link to="/student/dashboard/profile" className="dropdown-item">
+                <Link
+                  to="/teacher/dashboard/profile"
+                  className="dropdown-item"
+                  onClick={closeMenu}
+                >
                   Mi Perfil
                 </Link>
               </li>
@@ -101,7 +132,7 @@ export const AlumnosDashboardNavbar = () => {
         </div>
       </div>
       <div className="d-flex align-items-center">
-        <Link to="/student/dashboard/profile" className=" navbar-brand fs-2 h1">
+        <Link to="/teacher/dashboard/profile" className=" navbar-brand fs-2 h1">
           αlpha
         </Link>
       </div>

@@ -1,12 +1,13 @@
 import { Outlet } from "react-router-dom";
 import ScrollToTop from "../../../common/components/ScrollToTop";
+import { AdminNavbar } from "../components/AdminNavbar";
 import { Footer } from "../../../common/components/Footer";
-import { LoginNavbar } from "../components/LoginNavbar";
 
-export const LoginLayout = () => {
+// Base component that maintains the navbar and footer throughout the page and the scroll to top functionality.
+export const AdminLayout = () => {
   return (
     <ScrollToTop>
-      <LoginNavbar />
+      <AdminNavbar />
       <Outlet />
       <Footer />
     </ScrollToTop>

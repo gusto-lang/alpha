@@ -3,7 +3,7 @@ import imageHomeAdmin from "../../../assets/img/login.jpg";
 import { useState } from "react";
 import { useAuth } from "../../../context/AuthProvider";
 
-export const Admin = () => {
+export const AdminLoginPage = () => {
   const { login } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

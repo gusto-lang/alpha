@@ -5,36 +5,35 @@ import {
 } from "react-router-dom";
 
 // Auth Features
-import { Login } from "./features/auth/pages/Login";
-import { Admin as AdminLogin } from "./features/admin/pages/AdminLogin";
-import { Signup } from "./features/auth/pages/ChangeSingup";
-import { StudenSignup } from "./features/auth/pages/StudentSignup";
-import { TeacherSignup } from "./features/auth/pages/TeacherSignup";
-import SolicitarToken from "./features/auth/pages/SolicitarToken";
-import { NuevaContrasena } from "./features/auth/pages/NuevaContrasena";
-import { LoginLayout } from "./features/auth/pages/LoginLayout";
-import { SignupLayout } from "./features/auth/pages/SignupLayout";
+import { LoginPage } from "./features/auth/pages/LoginPage";
+import { AdminLoginPage } from "./features/admin/pages/AdminLoginPage";
+import { RoleSelectionPage } from "./features/auth/pages/RoleSectionPage";
+import { StudentRegisterPage } from "./features/auth/pages/StudentRegisterPage";
+import { TeacherRegisterPage } from "./features/auth/pages/TeacherRegisterPage";
+import { ForgotPasswordPage } from "./features/auth/pages/ForgotPasswordPage";
+import { ResetPasswordPage } from "./features/auth/pages/ResetPasswordPage";
+import { AuthLayout } from "./features/auth/pages/AuthLayout";
 
 // Admin Features
-import { AdminDashboardLayout } from "./features/admin/pages/AdminDashboardLayout";
-import { AdminProfile } from "./features/admin/pages/AdminProfile";
-import { AdminAlumnosNotas } from "./features/admin/pages/AdminAlumnosNotas";
-import { AdminAlumnosAsistencia } from "./features/admin/pages/AdminAlumnosAsistencia";
-import { AdminProfesores } from "./features/admin/pages/AdminProfesores";
-import { AdminSolicitudes } from "./features/admin/pages/AdminSolicitudes";
+import { AdminLayout } from "./features/admin/pages/AdminLayout";
+import { AdminProfilePage } from "./features/admin/pages/AdminProfilePage";
+import { AllGradesPage } from "./features/admin/pages/AllGradesPage";
+import { AllAsistancePage } from "./features/admin/pages/AllAsistancePage";
+import { TeacherManagementPage } from "./features/admin/pages/TeacherManagementPage";
+import { RegistrationRequestPage } from "./features/admin/pages/RegistrationRequestPage";
 
 // Student Features
-import { AlumnosDashboardLayout } from "./features/student/pages/AlumnosDashboardLayout";
-import { AlumnosProfile } from "./features/student/pages/AlumnosProfile";
-import { AlumnosNotas } from "./features/student/pages/AlumnosNotas";
-import { AlumnosHorario } from "./features/student/pages/AlumnosHorario";
+import { StudentLayout } from "./features/student/pages/StudentLayout";
+import { StudentProfilePage } from "./features/student/pages/StudentProfilePage";
+import { StudentSchedulePage } from "./features/student/pages/StudentSchedulePage";
+import { StudentGradePage } from "./features/student/pages/StudentGradePage";
 
 // Teacher Features
-import { ProfesoresDashboardLayout } from "./features/teacher/pages/ProfesoresDashboardLayout";
-import { ProfesoresProfile } from "./features/teacher/pages/ProfesoresProfile";
-import { ProfesoresAlumnosNotas } from "./features/teacher/pages/ProfesoresAlumnosNotas";
-import { ProfesoresAlumnosAsistencia } from "./features/teacher/pages/ProfesoresAlumnosAsistencia";
-import { ProfesoresHorario } from "./features/teacher/pages/ProfesoresHorario";
+import { TeacherLayout } from "./features/teacher/pages/TeacherLayout";
+import { TeacherProfilePage } from "./features/teacher/pages/TeacherProfilePage";
+import { GradeEntryPage } from "./features/teacher/pages/GradeEntryPage";
+import { AssistanceEntryPage } from "./features/teacher/pages/AssistanceEntryPage";
+import { TeacherSchedulePage } from "./features/teacher/pages/TeacherSchedulePage";
 
 // Common
 import PrivateRoute from "./common/components/PrivateRoute";
@@ -42,48 +41,45 @@ import PrivateRoute from "./common/components/PrivateRoute";
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" errorElement={<h1>Not found!</h1>}>
-      <Route path="/login/admin" element={<AdminLogin />} />
+      <Route path="/login/admin" element={<AdminLoginPage />} />
 
       <Route
         path="/"
-        element={<LoginLayout />}
+        element={<AuthLayout />}
         errorElement={<h1>Not found!</h1>}
       >
-        <Route path="/" element={<Login />} />
-        <Route path="/forgot-password" element={<SolicitarToken />} />
-        <Route path="/reset-password/:token" element={<NuevaContrasena />} />
-      </Route>
-
-      <Route path="/signup" element={<SignupLayout />}>
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/signup/alumno" element={<StudenSignup />} />
-        <Route path="/signup/profesor" element={<TeacherSignup />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+        <Route path="/reset-password/:token" element={<ResetPasswordPage />} />
+        <Route path="/signup" element={<RoleSelectionPage />} />
+        <Route path="/signup/alumno" element={<StudentRegisterPage />} />
+        <Route path="/signup/profesor" element={<TeacherRegisterPage />} />
       </Route>
 
       <Route
         path="/admin/dashboard"
         element={
           <PrivateRoute>
-            <AdminDashboardLayout />
+            <AdminLayout />
           </PrivateRoute>
         }
       >
-        <Route path="/admin/dashboard/profile" element={<AdminProfile />} />
+        <Route path="/admin/dashboard/profile" element={<AdminProfilePage />} />
         <Route
           path="/admin/dashboard/alumnos/notas"
-          element={<AdminAlumnosNotas />}
+          element={<AllGradesPage />}
         />
         <Route
           path="/admin/dashboard/alumnos/asistencia"
-          element={<AdminAlumnosAsistencia />}
+          element={<AllAsistancePage />}
         />
         <Route
           path="/admin/dashboard/profesores"
-          element={<AdminProfesores />}
+          element={<TeacherManagementPage />}
         />
         <Route
           path="/admin/dashboard/solicitudes"
-          element={<AdminSolicitudes />}
+          element={<RegistrationRequestPage />}
         />
       </Route>
 
@@ -91,25 +87,25 @@ export const router = createBrowserRouter(
         path="/teacher/dashboard"
         element={
           <PrivateRoute>
-            <ProfesoresDashboardLayout />
+            <TeacherLayout />
           </PrivateRoute>
         }
       >
         <Route
           path="/teacher/dashboard/profile"
-          element={<ProfesoresProfile />}
+          element={<TeacherProfilePage />}
         />
         <Route
           path="/teacher/dashboard/alumnos/notas"
-          element={<ProfesoresAlumnosNotas />}
+          element={<GradeEntryPage />}
         />
         <Route
           path="/teacher/dashboard/alumnos/asistencia"
-          element={<ProfesoresAlumnosAsistencia />}
+          element={<AssistanceEntryPage />}
         />
         <Route
           path="/teacher/dashboard/horario"
-          element={<ProfesoresHorario />}
+          element={<TeacherSchedulePage />}
         />
       </Route>
 
@@ -117,13 +113,19 @@ export const router = createBrowserRouter(
         path="/student/dashboard"
         element={
           <PrivateRoute>
-            <AlumnosDashboardLayout />
+            <StudentLayout />
           </PrivateRoute>
         }
       >
-        <Route path="/student/dashboard/profile" element={<AlumnosProfile />} />
-        <Route path="/student/dashboard/notas" element={<AlumnosNotas />} />
-        <Route path="/student/dashboard/horario" element={<AlumnosHorario />} />
+        <Route
+          path="/student/dashboard/profile"
+          element={<StudentProfilePage />}
+        />
+        <Route path="/student/dashboard/notas" element={<StudentGradePage />} />
+        <Route
+          path="/student/dashboard/horario"
+          element={<StudentSchedulePage />}
+        />
       </Route>
     </Route>
   )

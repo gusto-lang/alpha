@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../../context/AuthProvider";
 
-export const ProfesoresAlumnosNotas = () => {
+export const GradeEntryPage = () => {
   const [showTable, setShowTable] = useState(false);
   const [selectedYear, setSelectedYear] = useState("");
   const [selectedPeriod, setSelectedPeriod] = useState("");

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../../context/AuthProvider.jsx";
 
-export const ProfesoresAlumnosAsistencia = () => {
+export const AssistanceEntryPage = () => {
   const { store } = useAuth();
   const token = store.access_token;
 

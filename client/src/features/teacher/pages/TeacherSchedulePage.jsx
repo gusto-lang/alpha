@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../../context/AuthProvider";
 
-export const ProfesoresHorario = () => {
+export const TeacherSchedulePage = () => {
   // const [schedule, setSchedule] = useState([]);
   const { store } = useAuth();
   const [load, setLoad] = useState(false);

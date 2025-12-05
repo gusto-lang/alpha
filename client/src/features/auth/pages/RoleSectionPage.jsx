@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import studentImg from "../../../assets/img/students.png";
 import teacherImg from "../../../assets/img/teacher.png";
 
-export const Signup = () => {
+export const RoleSelectionPage = () => {
   return (
     <div className="background-container">
       <div className="login-signup-form position-absolute top-50 start-50 translate-middle border rounded-3 p-3 p-md-4">

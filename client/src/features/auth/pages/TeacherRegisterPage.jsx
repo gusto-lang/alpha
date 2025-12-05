@@ -3,7 +3,7 @@ import useGlobalReducer from "../../../common/hooks/useGlobalReducer.jsx";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
-export const TeacherSignup = () => {
+export const TeacherRegisterPage = () => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [asignatures, setAsignature] = useState([]);
   const [msg, setMsg] = useState("");

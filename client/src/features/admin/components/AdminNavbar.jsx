@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { useAuth } from "../../../context/AuthProvider";
 
-export const AdminDashboardNavbar = () => {
+export const AdminNavbar = () => {
   const navigate = useNavigate();
   const { logout } = useAuth();
   const [showMenu, setShowMenu] = useState(false);

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 //INSTALAR LIBRERIA : npm install react-leaflet@4.2.1 leaflet
 //INSTALAR LIBRERIA : npm install leaflet-defaulticon-compatibility
 
-export const Login = () => {
+export const LoginPage = () => {
   const { login } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

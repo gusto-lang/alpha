@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../../../context/AuthProvider";
 
-export const AlumnosNotas = () => {
+export const StudentGradePage = () => {
   const [asignature, setAsignature] = useState([]);
   const [period, setPeriod] = useState([]);
   const [selectedAsignature, setSelectedAsignature] = useState("");

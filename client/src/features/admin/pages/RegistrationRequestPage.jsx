@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 // Ya no necesitamos useAuth para el token, el apiClient lo maneja solo
 import { apiClient } from "../../../common/api/apiClient";
 
-export const AdminSolicitudes = () => {
+export const RegistrationRequestPage = () => {
   const [register, setRegister] = useState("");
   const [teachers, setTeachers] = useState([]);
   const [students, setStudents] = useState([]);

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../../../context/AuthProvider.jsx";
 
-export const AdminProfile = () => {
+export const AdminProfilePage = () => {
   const { store, getProfile } = useAuth();
   useEffect(() => {
     if (!store.user || !store.user.profile) {
