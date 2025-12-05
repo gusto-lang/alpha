@@ -1,11 +1,7 @@
-from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import String, Integer, ForeignKey, DECIMAL, Time, Date, Float
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 import datetime
-
-
-db = SQLAlchemy()
-
+from .extensions import db
 
 class User(db.Model):
     __tablename__ = 'user'
@@ -32,7 +28,7 @@ class User(db.Model):
             "email": self.email,
             "role": self.role,
             "status": self.status,
-             "location": self.location, 
+            "location": self.location, 
             "student": self.student.serialize() if self.role == 'student' and self.student else None,
             "teacher": self.teacher.serialize() if self.role == 'teacher' and self.teacher else None
         }
@@ -104,7 +100,6 @@ class Teacher(db.Model):
                 } for course in self.courses
             ]
         }
-
 
 
 class Course(db.Model):
@@ -225,9 +220,6 @@ class Grade(db.Model):
             "average": self.average,
             "course": course_name
         }
-
-
-
 
 
 class Payment(db.Model):
